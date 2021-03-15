@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "7f4f5623-487d-4e57-8435-abc5be6a274b",
+		"name": "NodeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API To get all users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0ZTRlYzU0Y2JmOTgwZTI0NjhjMTRjIiwicGhvbmUiOiI5ODA5NzUzNDU2IiwiZW1haWwiOiJrcm50a3Rlc3RAbWFpbGluYXRvci5jb20iLCJ1c2VybmFtZSI6Ikthcm5hdGFrYSJ9LCJpYXQiOjE2MTU3NDQ3MzUsImV4cCI6MTYxNTc0ODMzNX0.AnS_QS9QXd4MWR5etTL7hUBLSw-8MnWOsAiawqAST5w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7270/getusers/state",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7270",
+					"path": [
+						"getusers",
+						"state"
+					]
+				},
+				"description": "Pass state in params if want to have a collection group by state"
+			},
+			"response": []
+		},
+		{
+			"name": "API to push address in array",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0ZTRlYzU0Y2JmOTgwZTI0NjhjMTRjIiwicGhvbmUiOiI5ODA5NzUzNDU2IiwiZW1haWwiOiJrcm50a3Rlc3RAbWFpbGluYXRvci5jb20iLCJ1c2VybmFtZSI6Ikthcm5hdGFrYSJ9LCJpYXQiOjE2MTU3NDQ3MzUsImV4cCI6MTYxNTc0ODMzNX0.AnS_QS9QXd4MWR5etTL7hUBLSw-8MnWOsAiawqAST5w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"address\":\"Tonk\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7270/addaddress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7270",
+					"path": [
+						"addaddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API to get profile data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0ZTRlYzU0Y2JmOTgwZTI0NjhjMTRjIiwicGhvbmUiOiI5ODA5NzUzNDU2IiwiZW1haWwiOiJrcm50a3Rlc3RAbWFpbGluYXRvci5jb20iLCJ1c2VybmFtZSI6Ikthcm5hdGFrYSJ9LCJpYXQiOjE2MTU3NDQ3MzUsImV4cCI6MTYxNTc0ODMzNX0.AnS_QS9QXd4MWR5etTL7hUBLSw-8MnWOsAiawqAST5w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7270/myprofile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7270",
+					"path": [
+						"myprofile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API to get LOGGED IN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0ZDI0MzQzNDU4NGYwNjYwNWI3MWZlIiwicGhvbmUiOiI5ODA5NzUzNDU2IiwiZW1haWwiOiJuaWtAbWFpbGluYXRvci5jb20iLCJ1c2VybmFtZSI6Ik5pa2l0YSJ9LCJpYXQiOjE2MTU3MTA5NDQsImV4cCI6MTYxNTcxNDU0NH0.TsV9vILfC9qWBPxIlTZ74tJyUIFlMceoNUGE1UlSDrU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"password\":\"test\",\"username\":\"NikitaVj\",\"firstname\":\"Nikita\",\"lastname\":\"Vijay\",\"phone\":\"9809753456\",\"email\":\"nikvj@mailinator.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7270/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7270",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API to register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"password\":\"test\",\"username\":\"NikitaVj\",\"firstname\":\"Nikita\",\"lastname\":\"Vijay\",\"phone\":\"9809753456\",\"email\":\"nikvj@mailinator.com\",\"state\":\"Rajasthan\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7270/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7270",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

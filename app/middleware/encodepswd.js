@@ -1,0 +1,19 @@
+var mongoose = require('mongoose'),                                                                                                                                            
+    Schema = mongoose.Schema                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                               
+var bcrypt = require('bcrypt')                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                              
+var UserSchema = new Schema( {                                                                                                                                                 
+    email: String,                                                                                                                                                             
+    password: String                                                                                                                                                           
+} )                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                               
+// pre                                                                                                                                                                         
+UserSchema.pre('save', function(next) {                                                                                                                                        
+    if(this.password) {                                                                                                                                                        
+        var salt = bcrypt.genSaltSync(10)                                                                                                                                     
+        this.password  = bcrypt.hashSync(this.password, salt)                                                                                                                
+    }                                                                                                                                                                          
+    next()                                                                                                                                                                     
+})                                                                                                                                                                                                                                                                                                                                                          
+                                     
