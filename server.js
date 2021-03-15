@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+require('dotenv').config();
 // create express app
 const app = express();
 
@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
 
-const DB = 'mongodb+srv://NikVj:NikitaVijay@cluster0.auyu3.mongodb.net/nodetest?retryWrites=true&w=majority';
+const DB = process.env.DB_CONNECT;
 // middleware = (req,res,next) =>{
 // 	console.log('in Middleware');
 // }
